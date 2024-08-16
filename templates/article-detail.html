@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zxx">
+{% include 'includes/header.html' %}
+
+<body>
+  <!-- Header Section Start -->
+  {% include 'includes/navbar.html' %}
+  <!-- Header Section End -->
+
+  <!-- Banner Section Start -->
+  <section class="banner page-breadcrumb position-relative py-11">
+    <div class="overlay opacity-75"></div>
+    <div class="container position-relative">
+      <div class="page-title white text-center mt-8 mb-4">
+        <h2 class="white mb-2">{{ article.title }}</h2>
+      </div>
+      <div class="post-info text-white">
+        <ul class="m-0 p-0 list-unstyled d-flex flex-wrap justify-content-center">
+          <li class="me-2 pe-2 border-end border-1 border-white">
+            <a href="" class="text-white">
+              <i class="fa fa-user-circle-o me-1" aria-hidden="true"></i> Yazar
+            </a>
+          </li>
+          <li class="me-2 pe-2 border-end border-1 border-white">
+            <a href="" class="text-white">
+              <i class="fa fa-calendar-o me-1" aria-hidden="true"></i>{{ article.created_at | date:"d M Y" }}
+            </a>
+          </li>
+          <li>
+            <a href="" class="text-white">
+              <i class="fa fa-commenting-o me-1" aria-hidden="true"></i>Rəylər
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!-- Banner Section End -->
+
+  <section class="article-detail py-10">
+    <div class="container">
+      <div class="article-detail-inner">
+        <div class="row gx-lg-5 gy-5 gy-lg-0">
+          <div class="col-lg-8">
+            <div class="article-detail-left">
+              <div class="article-detail-image mb-6">
+                <img src="{{ article.image.url }}" alt="article-detail" class="w-100 rounded-1">
+              </div>
+              <div class="article-detail-info mb-6 text-center text-md-start">
+                <p>{{ article.content }}</p>
+              </div>
+            </div>
+          </div>
+          {% include 'sections/latest_articles.html' %}
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Article Single Section End -->
+
+  <!-- Footer Section Start -->
+  {% include 'includes/footer.html' %}
+  <!-- Footer Section End -->
+
+  <!--Bacl-to-top Button start-->
+  {% include 'includes/back_to_top.html' %}
+  <!--Bacl-to-top Button end-->
+
+  {% include 'includes/scripts.html' %}
+</body>
+
+</html>

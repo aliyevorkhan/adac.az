@@ -1,0 +1,112 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zxx">
+{% include 'includes/header.html' %}
+<body>
+<!-- Header Section Start -->
+{% include 'includes/navbar.html' %}
+<!-- Header Section End -->
+
+<!-- Banner Section Start -->
+<section class="banner page-breadcrumb position-relative py-11">
+  <div class="overlay opacity-75"></div>
+  <div class="container position-relative">
+    <div class="page-title white text-center mt-8">
+      <h2 class="white mb-2">Haqqımızda</h2>
+      <p class="m-0"><a href="{% url 'home' %}">Ana Səhifə</a> > <a href="{% url 'about' %}">Haqqımızda</a></p>
+    </div>
+  </div>
+</section>
+<!-- Banner Section End -->
+
+<!-- About Us Section Start -->
+<section class="about-us pt-10">
+  <div class="container">
+    <div class="about-us-inner border-dashed-bottom  pb-8">
+      <div class="row gx-lg-5 align-items-center gy-4 ">
+        <div class="col-lg-6">
+          <div class="about-us-images">
+            <div class="row gx-md-3 align-items-center gy-3">
+              <div class="col-lg-6 col-md-6">
+                <div class="left-image">
+                  <div class="about-us-image mb-2">
+                    <img src="images/planting&working/1.jpg" alt="Plant" class="w-100 rounded-1">
+                  </div>
+                  <div class="about-us-image">
+                    <img src="images/planting&working/2.jpg" alt="Plant" class="w-100 rounded">
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6">
+                <div class="right-image text-center">
+                  <div class="about-us-image">
+                    <img src="images/planting&working/3.jpg" alt="Plant" class="w-100 rounded-1">
+                  </div>
+                  <a href="">
+                    <div class="exp-box bg-green rounded-1 px-6 pb-7 pt-3 border border-white overflow-hidden">
+                      <div class="exp-badge mb-5">
+                        <span class="h2 fw-semibold text-capitalize white bg-darkgreen py-3 px-4 rounded-bottom-1">25</span>
+                      </div>
+                      <p class="h4 fw-semibold text-capitalize white mb-0">Years of experience in company</p>
+                    </div>
+                  </a>  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="about-us-content text-center text-lg-start">
+            <div class="about-us-title">
+              <h5 class="mb-2"><i class="fa fa-handshake-o pe-2" aria-hidden="true"></i> About Us</h5>
+              <h2>Join the race to make the world a <span class="green">better place</span></h2>
+            </div>
+            <div class="about-us-info pb-4 mb-4 border-dashed-bottom">
+              <p class="my-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <p class="my-2">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <img src="images/logo/2.jpg" alt="CEO Signature" class="w-30"><br>
+              <span class="darkgreen fw-semibold h6 oswald">Mark mcguire, CEO</span>
+            </div>
+            <div class="inquiry-box bg-grey p-4 rounded-1 d-flex">
+              <div class="inquiry-box-icon">
+                <a href="" class="h3 white"><i class="fa fa-volume-control-phone bg-darkgreen rounded-circle text-center me-3" aria-hidden="true"></i></a>
+              </div>
+              <div class="inquiry-box-info">
+                <h6 class="green mb-1">For any inquiries call the hotline:</h6>
+                <p class="darkgreen fw-semibold h3 oswald">+92 123 456 7890</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- About Us Section End -->
+ 
+<!-- Partner Section Start -->
+ {% include 'sections/partners.html' %}
+<!-- Partner Section End -->
+
+<!-- Time to Change Section Start -->
+<!-- Time to Change Section End -->
+
+<!-- To-Do Section Start -->
+<!-- To-Do Section End -->
+
+<!--  Testimonial Section Start -->
+{% include 'sections/team.html' %}
+<!--  Testimonial Section End -->
+
+<!-- Footer Section Start -->
+{% include 'includes/footer.html' %}
+<!-- Footer Section End -->
+
+<!--Bacl-to-top Button start-->
+{% include 'includes/back_to_top.html' %}
+<!--Bacl-to-top Button end-->
+
+{% include 'includes/scripts.html' %}
+</body>
+</html>

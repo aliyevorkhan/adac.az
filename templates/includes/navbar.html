@@ -1,0 +1,98 @@
+{% load static %}
+<header>
+    <div class="header-inner z-3 position-relative">
+      <div class="header-top bg-green white">
+        <div class="container">
+          <div class="header-top-inner  py-2">
+            <div class="row align-items-center">
+              <div class="col-lg-6">
+                <div class="header-top-info">
+                  <ul class="m-0 p-0">
+                    <li class="pe-3 border-end  d-inline">
+                      <i class="fa fa-phone pe-1"></i>
+                      +33 877 554 332
+                    </li>
+                    <li class=" px-3 border-end d-inline">
+                      <i class="fa fa-envelope-o pe-1"></i>
+                      info@website.com
+                    </li>
+                    <li class=" px-3 d-inline ">
+                      <i class="fa fa-clock-o pe-1"></i>
+                      Mon - Fri: 9:00 - 18:30
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="social-links text-end">
+                  <ul class="m-0 p-0 d-flex list-unstyled justify-content-end">
+                    <li class="me-1">
+                      <a href="#">
+                        <i class="fa fa-facebook text-center bg-grey darkgreen"></i>
+                      </a>
+                    </li>
+                    <li class="me-1">
+                      <a href="#">
+                        <i class="fa fa-twitter text-center bg-grey darkgreen"></i>
+                      </a>
+                    </li>
+                    <li class="me-1">
+                      <a href="#">
+                        <i class="fa fa-linkedin text-center bg-grey darkgreen"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i class="fa fa-google text-center bg-grey darkgreen"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header-nav-menu" id="header-nav-menu">
+        <div class="container">
+          <div class="header-nav-menu-inner py-2">
+            <div class="row align-items-center justify-content-between">
+              <div class="col-lg-3 col-md-5 col-5">
+                <div class="navbar-logo m-0">
+                  <!-- <a href="{% url 'home' %}"><img src="{% static 'images/logo/1.png' %}" alt="Logo" class="w-100"></a> -->
+                  <h1 class="m-0"><a href="{% url 'home' %}" class="white">ADAC.AZ</a></h1>
+                </div>
+              </div>
+              <div class="col-lg-7">
+                <div class="navbar-collapse ms-8" id="bs-example-navbar-collapse-1">
+                  <ul class="navbar-nav align-items-center justify-content-center flex-row" id="responsive-menu">
+                    <li class="nav-item ">
+                      <a class="nav-link px-3 py-0 white text-uppercase" aria-current="page" href="{% url 'home' %}">ANA SƏHİFƏ</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link px-3 py-0 white text-uppercase" href="{% url 'about' %}">HAQQIMIZDA</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link px-3 py-0 white text-uppercase" href="{% url 'events' %}">TƏDBİRLƏR</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link px-3 py-0 white text-uppercase" href="{% url 'articles' %}">MƏQALƏLƏR</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link px-3 py-0 white text-uppercasen" href="javascript:void(0);">VAKANSİYALAR</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-2">
+                <div class="navbar-button text-end">
+                  <a class="btn" href="donate-now.html">İCMAMIZA QOŞUL</a>
+                </div>
+              </div>
+              <div id="slicknav-mobile"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>

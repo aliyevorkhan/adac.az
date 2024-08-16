@@ -1,0 +1,891 @@
+/*------------------------------------------------------------------
+* Project:        Ecoviron - Ecology & Enviroment Charity HTML Templates
+* Author:         HtmlDesign Templates
+* URL:            https://themeforest.net/user/htmldesigntemplates/portfolio
+* Created:        07/19/2024
+-------------------------------------------------------------------*/
+
+
+/* Header CSS */
+
+/*Header-top  Section*/
+
+.social-links i{
+  height: 34px;
+  width: 34px;
+  line-height: 34px;
+  transition:all 0.3s ease-in-out;
+  border-radius: 15%;
+}
+
+.social-links i:hover{
+  background-color: #769DCC;
+  color: #ffffff;
+  transition:all 0.3s ease-in-out;
+}
+
+@media (max-width: 1100px) {
+  .header-top, nav.navbar.navbar-expand-lg.py-2.navbar-sticky-in, .navbar-button {
+    display: none;
+  }
+}
+
+
+
+/*Header-nav-menu  Section*/
+ .nav-link:hover, .navbar-nav .nav-link.active, .navbar-nav .nav-link.show{
+  color: #769DCC;
+}
+
+.nav-link:focus{
+  color: #ffffff;
+}
+
+.dropdown-menu li:hover  a{
+  background-color:#769DCC ;
+  color: #fff ;
+  transition: none;
+}
+
+.fixed-top {
+  background-color: #293A45;
+}
+
+
+@media (min-width: 992px) {
+  .navbar-nav .dropdown-menu{
+    position: absolute;
+  }
+  .dropdown-menu{
+    display: block;
+    opacity: 0;
+    visibility:hidden;
+  }
+
+  .dropdown:hover>.dropdown-menu {
+    opacity: 1 ;
+    visibility: visible;
+    transition:all .3s ease-in-out;
+  }
+  
+  .dropdown>.dropdown-toggle:active {
+    /*Without this, clicking will make it sticky*/
+    pointer-events: none;
+  }
+
+  ul.dropdown-menu {
+    max-height: 600px !important; 
+    overflow-y: auto !important;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+}
+
+@media (max-width: 1100px){
+  .menu-search, .dropdown-toggle::after {
+    display: none;
+  }
+
+  .slicknav_btn.slicknav_open:before, .slicknav_btn.slicknav_collapsed:before{
+    top: -40px;
+    left: 0;
+  }
+
+
+  .slicknav_nav{
+    border-radius: 20px;
+    box-shadow: 0 0 15px #cccccc50;
+    background-color: #f9f9f9;
+  }
+
+  a.nav-link{
+    text-transform:capitalize !important;
+    font-size: 15px;
+    color: #777;
+  } 
+
+  .slicknav_nav ul li{
+    background-color: #f9f9f9;
+  }
+
+  .slicknav_nav a:hover, .slicknav_nav .slicknav_row:hover{
+    background-color: #769DCC;
+    color: #fff;
+  }
+
+
+  .nav-link{
+    padding: 12px 36px !important;
+    margin: 0 !important;
+  }
+
+  .dropdown-menu>li>a{
+    padding: 12px 45px !important;
+    font-size: 15px;
+    color: #777 !important;
+    background-color: #f9f9f9; 
+  }
+
+  .dropdown-menu li:hover a {
+    color: #fff !important;
+  }
+
+  .nav-link:focus{
+    color: #fff !important;
+  }
+ 
+  a.nav-link.dropdown-toggle:focus{
+    color: #fff !important;
+    background-color: #769DCC;
+  }
+
+  .dropdown-menu li:first-child:hover  a, .dropdown-menu li,   .dropdown-menu li:last-child:hover  a{
+    border-radius: 0 !important;
+  }
+  
+  ul.dropdown-menu{
+    margin: 0;
+    border-radius: 0 !important;
+  }
+
+  .navbar li{
+    border-top: 1px solid #B6B3C470;
+  }
+
+  .dropdown-menu li{
+    border-color: #B6B3C470;
+  }
+
+  li.nav-item.dropdown.slicknav_parent.slicknav_open > a > a {
+    background: #769DCC;
+    color : #fff !important;
+  }
+
+  li.nav-item.dropdown.slicknav_parent.slicknav_open > a span i {
+    color: #fff !important;
+  } 
+
+  .slicknav_btn.slicknav_open:before{
+    color: #769DCC;
+  }
+
+  .fixed-top{
+    display: none;
+  }
+}
+
+@media (max-width: 990px) {
+  .slicknav_nav{
+    top: 90px;
+  }
+ 
+}
+
+@media (max-width: 576px){
+  .slicknav_btn.slicknav_open:before, .slicknav_btn.slicknav_collapsed:before{
+    top: -30px;
+    left: -20px;
+  }
+  .slicknav_nav{
+    top: 60px;
+  }
+  .slicknav_nav a:hover, .slicknav_nav .slicknav_row:hover{
+    background-color: #769DCC !important;
+  }     
+}
+
+/* Banner Section css */
+.banner{
+  margin-top: -91px;
+}
+.slide img{
+  height: 800px;
+}
+
+.carousel-caption{
+  top: 25%;
+}
+
+.carousel-caption *:nth-child(n){
+  opacity: 0;
+}
+
+.animated{
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+.carousel-caption *:nth-child(1n){
+  animation-delay: 1s;
+}
+.carousel-caption *:nth-child(2n){
+  animation-delay: 2s;
+}
+.carousel-caption *:nth-child(3n){
+  animation-delay: 2.5s;
+}
+.carousel-caption *:nth-child(4n){
+  animation-delay: 3s;
+}
+
+@keyframes fadeInDown {
+  0% {
+      opacity: 0;
+      transform: translateY(-50px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+
+/* To-Do Section CSS */
+.box-icon i{
+  height: 100px;
+  width: 100px;
+  line-height: 90px;
+}
+
+.to-do {
+  margin-top: -100px;
+}
+
+.to-do-inner a:hover{
+  box-shadow: 0px 0px 15px 0px rgba(204, 204, 204, 0.4);
+  transition: all .3s ease-in-out;
+}
+
+.to-do-inner a:hover i{
+  background-color: #293A45;;
+  transition: all .3s ease-in-out;
+}
+
+.to-do-inner a:hover h4{
+  color: #769DCC;
+  transition: all .3s ease-in-out;
+}
+
+/* About Us Section CSS */
+.exp-box{
+  border-width: 12px !important;
+  margin-left: -60px;
+}
+
+.inquiry-box-icon i{
+  width: 65px;
+  height: 65px;
+  line-height: 65px;
+}
+
+.inquiry-box-icon i:hover{
+  color: #fff;
+  background-color: #769DCC;
+  transition: all .3s ease-in-out;
+}
+
+@media (max-width: 576px){
+  .exp-box{
+    border-width: 12px 0px 0px 0px !important;
+    margin-left: 0px;
+  }
+}
+
+
+/* Time to change section CSS */
+.time-to-change{
+  background-image: url(../images/planting&working/9.jpg);
+  background-position: center left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.time-to-change-bg-overlay{
+  background-color: transparent;
+  background-image: linear-gradient(90deg, #10101099 68%, #769DCC 0% );
+  opacity: 1;
+}
+
+.lightgallery-box a{
+  height: 500px;
+  background-image: url(../images/planting&working/4.jpg);
+  background-position: center;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+.lightgallery-box a:hover i{
+  color: #fff;
+  opacity: 1 !important;
+  transition: all .3s ease-in-out;
+}
+
+
+@media (max-width:576px) {
+  .counter-box {
+    border-bottom: 1px solid;
+  }
+}
+
+/* Gallery Section CSS */
+.gallery {
+  background-image: url(../images/background/1.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.image-overlay:hover {
+  opacity: .6;
+}
+
+
+/* Campaign Section CSS */
+.percentage-wrapper {
+  height: 22px;
+  top: -32px;
+  right: -23px;
+  border-radius: 3px; 
+  font-size: 13px;
+}
+.percentage-wrapper::after{
+  content: " ";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background-color: #769DCC;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  z-index: -1;
+}
+
+.progress-bar {
+  animation: progressBar 3s ease-in-out;
+  animation-fill-mode:both; 
+  -moz-animation: progressBar 3s ease-in-out;
+  -moz-animation-fill-mode:both; 
+}
+
+@keyframes progressBar {
+  0% { width: 0; }
+  100% { width: width; }
+}
+
+/* Donate Section CSS */
+.donate-suggetion{
+  margin-bottom: -138px;
+}
+
+.donate-suggetion-box{
+  background-image: url(../images/planting&working/10.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.clean-suggetion-box{
+  background-image: url(../images/planting&working/2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.suggetion-icon i {
+  height: 100px;
+  width: 100px;
+  line-height: 100px;
+  transition: all .3s ease-in-out;
+}
+
+.suggetion-icon i:hover{
+  color: #769DCC;
+  background-color: #fff;
+  transition: all .3s ease-in-out;
+}
+
+@media (max-width:576px){ 
+  .donate-suggetion-box, .clean-suggetion-box{
+    padding: 60px 20px !important;
+  }
+}
+
+/* Vision & Mission section CSS */
+.vision-mission{
+padding-top: 238px;
+}
+
+.vision-mission .overlay{
+  background-color: transparent;
+  background-image: url(../images/background/2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.7;
+}
+
+/* Team Section CSS */
+.social-link li a{
+  width:38px;
+  height:38px;
+  line-height:38px;
+  transition:all .3s ease-in-out
+}
+
+
+.team-member-image::after{
+  position: absolute;
+  content:"";
+  height:100%; 
+  top: 0;
+  left: 0;
+  background:rgba(0,0,0,.7); 
+  width: 100%;
+  border-radius: 5px;
+  opacity: 0;
+  transition: all ease-in-out .7s;
+}
+
+.team-member-box:hover .team-member-image::after{
+  opacity: .8;
+  transition: all ease-in-out .7s;
+}
+
+.social-link a:hover{
+  color: #fff;
+  background-color: #769DCC !important;
+  transition: all ease-in-out .3s;
+}
+
+.social-link li:nth-child(2), .team-member-image:hover .social-link li:nth-child(2){
+  animation-delay: .2s;
+}
+
+.social-link li:nth-child(3), .team-member-image:hover .social-link li:nth-child(3){
+  animation-delay: .3s;
+}
+
+@keyframes fadeInDown {
+  0% {
+      opacity: 0;
+      transform: translateY(-50px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes fadeInup {
+  0% {
+      opacity: 1;
+      transform: translateY(0px);
+  }
+  100% {
+      opacity: 0;
+      transform: translateY(-50px);
+  }
+}
+
+.social-link li {
+  -webkit-animation-duration: .5s;
+  animation-duration: .5s;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeInup;
+  animation-name: fadeInup;
+  opacity: 0;
+}
+
+.team-member-box:hover .social-link li{
+  -webkit-animation-duration: .5s;
+  animation-duration: .5s;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+
+
+/* Volunteer section CSS */
+.volunteer{
+  background-image: linear-gradient(90deg, #FFFFFF00 45%, #769DCC 0%);
+}
+
+/* Event Section CSS */
+.event{
+  background-image: linear-gradient(90deg, #ffffff 30%, #F0F4F9 0);
+}
+
+/* Help Section CSS */
+.help{
+  background-image: url(../images/banner-slider/2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.help-form{
+  margin: -40px 0;
+}
+
+/* Footer Section */
+footer .overlay{
+  background-image: url(../images/background/2.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: transparent;
+}
+
+.footer-socials i{
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  transition:all 0.3s ease-in-out;
+}
+
+.footer-socials i:hover{
+  background-color: #769DCC !important;
+  color: #ffffff;
+  transition:all 0.3s ease-in-out;
+}
+
+
+/* ========================================= */
+/*          Event Detail page CSS                */
+/* ========================================= */
+
+/* Banner section */
+.box-icon1 i{
+  height: 80px; 
+  width: 80px;
+  line-height: 70px;
+}
+
+.charity-box{
+  background-image: url(../images/planting&working/4.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* ========================================= */
+/*          Career List page CSS             */
+/* ========================================= */
+
+/* Career-list section */
+.send-cv-box{
+  background-image: linear-gradient(180deg, #293A45 0%, #769DCC 100%);
+}
+
+.cv-box-icon i{
+  height: 100px;
+  width: 100px;
+  line-height: 100px;
+  transition: all .3s ease-in-out;
+}
+
+.cv-box-icon i:hover{
+  background-color: #fff;
+  color: #293A45;
+  transition: all .3s ease-in-out;
+}
+
+.line-icon::before,
+.line-icon::after {      
+  width: 20%;
+  height: 1px;
+  border-top: 1px solid #fff; 
+  display: inline-block;
+  content: '';
+  padding-top: 0.4em; 
+  margin-left: 3%; 
+  margin-right: 3%;
+}
+
+/* ========================================= */
+/*               Faq page CSS                */
+/* ========================================= */
+
+/* Popular Quesion CSS */
+.accordion-button:focus {
+  box-shadow: none;
+  z-index: 0;
+}
+
+.accordion-button:not(.collapsed){
+  background-color: #F0F4F9;
+  color: #769DCC;
+  box-shadow: none;
+}
+
+.accordion-button::after{
+  background-image: none;
+  content:"\f067" ;
+  font-family: "FontAwesome";
+}
+
+.accordion-button:not(.collapsed)::after{
+  color: #769DCC !important;
+  background-image: none;
+  transform: none;
+  content:"\f068" ;
+  font-family: "FontAwesome";
+}
+
+/* faq-form CSS */
+.faq-form{
+  background-image: linear-gradient(90deg, #FFFFFF 35%, #F0F4F9 0%);
+  background-color: transparent;
+}
+
+@media (min-width: 1024px) {
+  .faq-qoute {
+    margin: -90px 20px 0px 20px ;
+  }
+}
+
+/* ========================================= */
+/*            Testimonial page CSS           */
+/* ========================================= */
+
+/* Testimonial Section */
+.testimonial1{
+  background-image: url(../images/background/1.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+/* ========================================= */
+/*            Comming-Soon page CSS          */
+/* ========================================= */
+.coming-soon .overlay {
+  background-color: transparent;
+  background-image: url(../images/background/2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: .75;
+}
+
+.divider-pattern {
+  background: repeating-linear-gradient(-55deg, #fff, #fff 1px, transparent 1px, transparent 6px);
+}
+
+.coming-soon .footer-socials i:hover{
+  border-radius: 50%;
+}
+
+.countdown span{
+  font-size: 80px;
+}
+
+@media (max-width: 992px){
+  .coming-soon span {
+    font-size: 54px;
+  }
+  .coming-soon p{
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 800px) and (max-width:996px){
+  .coming-soon{
+    height: 170vh !important;
+  }
+}
+
+@media (max-width: 576px){
+  .coming-soon span {
+    font-size: 42px;
+  }
+}
+
+/* ========================================= */
+/*            Product List page CSS          */
+/* ========================================= */
+
+/* Shop Section CSS */
+
+.shop .image-overlay{
+  width: 94%;
+}
+
+@media (max-width: 996px){
+  .shop .image-overlay {
+    width: 97%;
+  }
+}
+
+.page-numbers a:hover {
+  color: #fff;
+  background-color: #293A45;
+  transition: all 0.3s ease-in-out;
+}
+
+/* ========================================= */
+/*           Product Detail page CSS         */
+/* ========================================= */
+
+
+.price input {
+  width: 54px;
+}
+
+.product-img-nav img{
+  width: 115px;
+  height: 115px;
+}
+
+.product-img-nav img:hover, .slick-current img{
+  opacity: 1 !important;
+}
+
+.product-img-nav.slick-slide.slick-current.slick-center, .product-img-nav.slick-slide{
+  width: 115px !important;
+}
+
+.slick-track{
+  display: flex;
+  justify-content: center;
+}
+
+.slick-list.draggable{
+  padding: 0 !important;
+}
+
+@media (max-width: 576px) {
+  .product-img-nav img{
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* Related Product Section CSS */
+
+.star-rating-inner {
+  transform: rotateY(180deg);
+}
+
+.star-rating input{
+  display: none;
+}
+
+.star-rating label{
+  width: 2%;
+  aspect-ratio: 1;
+  cursor: pointer;
+}
+
+.star-rating label .star-stroke{
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  background: #293A45;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.star-rating label .star-stroke .star-fill{
+  width: 70%;
+  aspect-ratio: 1;
+  background: transparent;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.star-rating input:hover ~ label .star-stroke,.star-rating input:checked ~ label .star-stroke{
+  background: #769DCC;
+  transition: all .2s ease-in-out;
+}
+
+.star-rating input:checked ~ label .star-stroke .star-fill{
+  background: #769DCC;
+  transition: all .2s ease-in-out;
+}
+
+/* Related-product Section CSS */
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+  color: #769DCC;
+}
+
+.related-product-inner .nav-link:hover{
+  color: #666666;
+}
+
+.tab-content{
+  margin-top: -3px;
+}
+
+
+/* ========================================= */
+/*              Cart page CSS                */
+/* ========================================= */
+
+/* Cart Section CSS */
+.cart .table img{
+  width: 55px;
+  height: 55px;
+}
+
+.cart-list input{
+  width: 60px;
+}
+
+
+/* ========================================= */
+/*           Article List Page CSS           */
+/* ========================================= */
+
+/* article-list css */
+.founder-image img {
+  height: 110px;
+  width: 110px;
+}
+
+/* ========================================= */
+/*           Article Single Page CSS           */
+/* ========================================= */
+
+/* Article Single CSS */
+.author-info img {
+  height: 90px;
+  width: 90px;
+}
+
+/* ========================================= */
+/*           Contact US Page CSS             */
+/* ========================================= */
+
+/* contact us CSS */
+.contact-us{
+  background-image: url(../images/background/1.png);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contact-info-left i{
+  height: 80px;
+  width: 80px;
+  line-height: 80px;
+}
+
+.contact-info-left .info-box a:hover i{
+  background-color: #293A45;
+  transition: all .3s ease-in-out;
+}
+
+/* ========================================= */
+/*           Contact US Page CSS             */
+/* ========================================= */
+.donate-now{
+  background-image: url(../images/background/1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

@@ -1,0 +1,87 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zxx">
+{% include 'includes/header.html' %}
+
+<body>
+<!-- Header Section Start -->
+{% include 'includes/navbar.html' %}
+
+<!-- Header Section End -->
+
+<!-- Banner Section Start -->
+<section class="banner page-breadcrumb position-relative py-11">
+  <div class="overlay opacity-75"></div>
+  <div class="container position-relative">
+    <div class="page-title white text-center mt-8">
+      <h2 class="white mb-2">Tədbirlər</h2>
+      <p class="m-0"><a href="{% url 'home' %}">Ana Səhifə</a> > <a href="{% url 'events' %}">Tədbirlər</a></p>
+    </div>
+  </div>
+</section>
+<!-- Banner Section End -->
+
+
+<!--  Event Section Start -->
+{% include 'sections/events.html' %}
+<!--  Event Section End -->
+
+<!--  Volunteer Section Start -->
+<!-- <section class="volunteer  my-6">
+  <div class="inner-volunteer w-100 px-2">
+    <div class="row align-items-center">
+      <div class="col-lg-6 p-0">
+        <div class="volunteer-img-slider p-2">
+          <div class="slider volunteer-slider">
+            <div class="box1 d-flex justify-content-center mx-1">
+              <img src="images/planting&working/11.jpg" alt="volunteer-img" class="w-100 rounded-1">
+            </div>
+            <div class="box2 d-flex justify-content-center mx-1">
+              <img src="images/planting&working/4.jpg" alt="volunteer-img" class="w-100 rounded-1">
+            </div>
+            <div class="box3 d-flex justify-content-center mx-1">
+              <img src="images/planting&working/5.jpg" alt="volunteer-img" class="w-100 rounded-1">
+            </div>
+            <div class="box4 d-flex justify-content-center mx-1">
+              <img src="images/planting&working/1.jpg" alt="volunteer-img" class="w-100 rounded-1">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 p-0">
+        <div class="volunteer-left white bg-green text-center text-lg-start p-4">
+          <div class="volunteer-title">
+            <h5 class="mb-2 white"><i class="fa fa-handshake-o pe-2" aria-hidden="true"></i>How we help</h5>
+            <h2 class=" mb-1 white">Become a <span class="darkgreen">Volunteer</span></h2>
+          </div>
+          <div class="volunteer-info">
+            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            <a href="contact.html" class="btn btn2">Join us now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+</section> -->
+<!--  Volunteer Section End -->
+
+<!-- Partner Section Start -->
+{% include 'sections/partners.html' %}
+<!-- Partner Section End -->
+
+<!-- Footer Section Start -->
+{% include 'includes/footer.html' %}
+
+<!-- Footer Section End -->
+
+<!--Bacl-to-top Button start-->
+{% include 'includes/back_to_top.html' %}
+
+<!--Bacl-to-top Button end-->
+
+{% include 'includes/scripts.html' %}
+
+</body>
+</html>
