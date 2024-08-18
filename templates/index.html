@@ -15,7 +15,7 @@
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false"
       data-bs-interval="7000">
       <div class="carousel-inner">
-        <div class="carousel-item active position-relative">
+        <!-- <div class="carousel-item active position-relative">
           <img src="{% static 'images/banner-slider/1.png' %}" class="d-block w-100 object-fit-cover"
             alt="banner-image">
           <div class="overlay"></div>
@@ -26,20 +26,20 @@
               in culpa qui officia deserunt mollit anim id culpa qui officia est laborum.</p>
             <a class="btn text-uppercase mt-6 fadeInDown animated">Daha Ətraflı</a>
           </div>
-        </div>
+        </div> -->
         <div class="carousel-item active position-relative">
           <img src="{% static 'images/banner-slider/2.png' %}" class="d-block w-100 object-fit-cover"
             alt="banner-image">
           <div class="overlay"></div>
           <div class="carousel-caption w-lg-60 p-2 start-0 end-0 text-center m-auto">
             <h3 class="green mt-1 mb-2 fadeInDown animated">Birlikdə İrəliləyirik</h3>
-            <h1 class="white pb-3 mt-1 mb-2 fadeInDown animated">Birlikdə İrəliləyirik</h1>
-            <p class="h6 m-0 fst-italic pb-3 fadeInDown animated">Excepteur sint occaecat cupidatat non proident, sunt
-              in culpa qui officia deserunt mollit anim id culpa qui officia est laborum.</p>
-            <a class="btn text-uppercase mt-6 fadeInDown animated">Daha Ətraflı</a>
+            <h1 class="white pb-3 mt-1 mb-2 fadeInDown animated">Birlikdə İnkişaf Edirik</h1>
+            <!-- <p class="h6 m-0 fst-italic pb-3 fadeInDown animated">Excepteur sint occaecat cupidatat non proident, sunt
+              in culpa qui officia deserunt mollit anim id culpa qui officia est laborum.</p> -->
+            <!-- <a class="btn text-uppercase mt-6 fadeInDown animated">Daha Ətraflı</a> -->
           </div>
         </div>
-        <div class="carousel-item active position-relative">
+        <!-- <div class="carousel-item active position-relative">
           <img src="{% static 'images/banner-slider/3.png' %}" class="d-block w-100 object-fit-cover"
             alt="banner-image">
           <div class="overlay"></div>
@@ -50,7 +50,7 @@
               in culpa qui officia deserunt mollit anim id culpa qui officia est laborum.</p>
             <a class="btn text-uppercase mt-6 fadeInDown animated">Daha Ətraflı</a>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </section>
@@ -111,69 +111,7 @@
   <!-- To-Do Section End -->
 
   <!-- About Us Section Start -->
-  <section class="about-us ">
-    <div class="container">
-      <div class="about-us-inner border-dashed-bottom  pb-8">
-        <div class="row gx-lg-5 align-items-center gy-4 ">
-          <div class="col-lg-6">
-            <div class="about-us-images">
-              <div class="row gx-md-3 align-items-center gy-3">
-                <div class="col-lg-6 col-md-6">
-                  <div class="left-image">
-                    <div class="about-us-image mb-2">
-                      <img src="{% static 'images/planting&working/1.jpg' %}" alt="Plant" class="w-100 rounded-1">
-                    </div>
-                    <div class="about-us-image">
-                      <img src="{% static 'images/planting&working/2.jpg' %}" alt="Plant" class="w-100 rounded">
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                  <div class="right-image text-center">
-                    <div class="about-us-image">
-                      <img src="{% static 'images/planting&working/3.jpg' %}" alt="Plant" class="w-100 rounded-1">
-                    </div>
-                    <a href="">
-                      <div class="exp-box bg-green rounded-1 px-6 pb-7 pt-3 border border-white overflow-hidden">
-                        <div class="exp-badge mb-5">
-                        </div>
-                        <p class="h4 fw-semibold text-capitalize white mb-0">Years of experience in company</p>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="about-us-content text-center text-lg-start">
-              <div class="about-us-title">
-                <h5 class="mb-2"><i class="fa fa-handshake-o pe-2" aria-hidden="true"></i> Haqqımızda</h5>
-                <h2>Data və Süni İntellekt Sahəsində İrəliləmək Üçün Bizə <span class="green">Qoşulun</span></h2>
-              </div>
-              <div class="about-us-info pb-4 mb-4 border-dashed-bottom">
-                <p class="my-2">Misiyamız, müxtəlif sektorlarda data elmi və süni intellektin inkişafını təşviq
-                  etməkdir. İstər təcrübəli bir mütəxəssis, istərsə də yeni başlayan biri olsanız, icmamızda sizin üçün
-                  yer var. Birlikdə, Azərbaycanın data və süni intellekt sahəsindəki inkişafına töhvə verək.</p>
-                <span class="darkgreen fw-semibold h6 oswald">Elnur Sadıqov, Təsisçi</span>
-              </div>
-              <div class="inquiry-box bg-grey p-4 rounded-1 d-flex">
-                <div class="inquiry-box-icon">
-                  <a href="" class="h3 white"><i
-                      class="fa fa-volume-control-phone bg-darkgreen rounded-circle text-center me-3"
-                      aria-hidden="true"></i></a>
-                </div>
-                <div class="inquiry-box-info">
-                  <h6 class="green mb-1">For any inquiries call the hotline:</h6>
-                  <p class="darkgreen fw-semibold h3 oswald">+92 123 456 7890</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  {% include 'sections/about-us.html' %}
   <!-- About Us Section End -->
 
   <!-- Partner Section Start -->
@@ -181,7 +119,6 @@
   <!-- Partner Section End -->
 
   <!--  Event Section Start -->
-  {% include 'sections/events.html' %}
   <!--  Event Section End -->
 
   <!-- Footer Section Start -->

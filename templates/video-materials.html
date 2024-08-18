@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zxx">
+
+{% include 'includes/header.html' %}
+
+<body>
+  <!-- Header Section Start -->
+  {% include 'includes/navbar.html' %}
+  <!-- Header Section End -->
+
+  <!-- Banner Section Start -->
+  <section class="banner page-breadcrumb position-relative py-11">
+    <div class="overlay opacity-75"></div>
+    <div class="container position-relative">
+      <div class="page-title white text-center mt-8">
+        <h2 class="white mb-2">Video Materiallar</h2>
+        <p class="m-0"><a href="{% url 'home' %}">Ana Səhifə</a> > <a href="{% url 'video-materials' %}">Video Materiallar</a></p>
+      </div>
+    </div>
+  </section>
+  <!-- Banner Section End -->
+
+  <!-- Article List Section Start -->
+  <section class="article-list py-10">
+    <div class="container">
+      <div class="article-list-inner">
+        <div class="row gx-lg-5 gy-5 gy-lg-0">
+          <div class="col-lg-8">
+            <div class="article-list-left">
+              <div class="article-list-left-top mb-4">
+                <div class="row gx-md-5 gy-5">
+                  {% for video_material in video_materials %}
+                  <div class="col-lg-6 col-md-6">
+                    <div class="blog-box p-4 border border-3 border-grey rounded-1">
+                      <div class="blog-image mb-4">
+                        <a href="{% url 'video_material_detail' video_material.id %}"><img src="{{ video_material.image.url }}" alt="blog-image" class="w-100 rounded-1"></a>
+                      </div>
+                      <div class="blog-box-title mb-3">
+                        <h4 class="mb-2"><a href="{% url 'video_material_detail' video_material.id %}" class="darkgreen">{{video_material.title}}</a></h4>
+                        <p><span class="pe-1"><small>{{ video_material.created_at | date:"d M Y H:i" }}</small></span>|<span
+                            class="ps-1"><small>Rəy yoxdur</small></span></p>
+                      </div>
+                      <div class="blog-info">
+                        <p class="mb-2">{{video_material.description|safe|truncatewords:20}}</p>
+                        <a href="{% url 'video_material_detail' video_material.id %}" class="darkgreen">Davamını oxu</a>
+                      </div>
+                    </div>
+                  </div>
+                  {% endfor %}
+
+                </div>
+              </div>
+              <!-- <div class="article-list-advertisement">
+                <img src="images/advertisment.jpg" alt="ad-image" class="w-100 rounded-1">
+              </div> -->
+            </div>
+          </div>
+          {% include 'sections/latest_video_materials.html' %}
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Article List Section End -->
+
+  <!-- Footer Section Start -->
+  {% include 'includes/footer.html' %}
+  <!-- Footer Section End -->
+
+  <!--Bacl-to-top Button start-->
+  {% include 'includes/back_to_top.html' %}
+  <!--Bacl-to-top Button end-->
+
+{% include 'includes/scripts.html' %}
+</body>
+
+</html>

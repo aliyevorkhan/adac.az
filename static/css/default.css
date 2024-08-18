@@ -36,7 +36,7 @@
 }
 
 /* Color */
-.green{color: #769DCC;}
+.green{color: #255896;}
 .darkgreen{color: #293145;}
 .grey{color: #666666;}
 .white{color: #ffffff;}
@@ -44,7 +44,7 @@
 .red{color: #FF0000;}
 
 /* Background Color */
-.bg-green{background-color: #769DCC;}
+.bg-green{background-color: #255896;}
 .bg-darkgreen{background-color: #293145;}
 .bg-lightgrey{background-color: #f9fafa;}
 .bg-darker{background-color: #293A45;}
@@ -55,7 +55,7 @@
 .border-grey{border-color: #F0F4F9 !important;}
 .border-dark{border-color: #66666666 !important;}
 .border-light{border-color: #F0F4F94F !important;}
-.border-green{border-color: #769DCC !important;}
+.border-green{border-color: #255896 !important;}
 .border-darkgreen{border-color: #293A45 !important;}
 
 /* font-style */
@@ -134,7 +134,7 @@ a{
 }
 
 a:hover {
-  color: #769DCC;
+  color: #255896;
   transition: all .3s ease-in-out;
 }
 
@@ -626,7 +626,7 @@ input::placeholder, textarea::placeholder {
 .btn, .btn1,.btn2{
   font-size: 15px;
   color: #fff;
-  background-color: #769DCC;
+  background-color: #255896;
   border-radius: 20px;
   text-transform: capitalize;
   padding: 12px 20px;
@@ -635,7 +635,7 @@ input::placeholder, textarea::placeholder {
 }
 
 .btn:hover{
-  color: #769DCC;
+  color: #255896;
   background-color: #ffffff;
   transition: all .3s ease-in-out;
   box-shadow: 0px 0px 0px 4px rgba(255, 255, 255, 0.10196078431372549);
@@ -649,7 +649,7 @@ input::placeholder, textarea::placeholder {
 }
 
 .btn2 {
-  color: #769DCC;
+  color: #255896;
   background-color: #fff;
 }
 
@@ -788,7 +788,7 @@ input::placeholder, textarea::placeholder {
   width: 50px;
   height: 50px;
   transition: all ease-in-out .5s;
-  background-color: #769DCC;
+  background-color: #255896;
 }
 
 #back-to-top a:hover{

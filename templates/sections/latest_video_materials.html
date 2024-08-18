@@ -1,0 +1,30 @@
+{% load static %}
+
+<div class="col-lg-4">
+    <div class="article-single-right text-center">
+        <div class="recent-news p-6 bg-grey rounded-1 border-bottom border-4 border-green mb-6">
+            <h4 class="mb-4">Son Video Materiallar</h4>
+            <div class="seperator border-bottom border-2 border-green w-20 m-auto mb-4"></div>
+            <div class="recnet-news-list text-start">
+                <div class="row">
+                    {% for video_material in video_materials %}
+                    <div class="col-lg-12 col-md-6 pb-2 mb-2 border-bottom border-1 border-white">
+                        <div class="news-list-box d-flex">
+                            <div class="news-image w-40 me-2">
+                                <a href="{% url 'video_material_detail' video_material.id %}"><img src="{{ video_material.image.url}}" alt="news-image"
+                                        class="w-100 rounded"></a>
+                            </div>
+                            <div class="news-info">
+                                <h6 class="mb-1"><a href="{% url 'video_material_detail' video_material.id %}" class="darkgreen">{{ video_material.title}}</a>
+                                </h6>
+                                <p class="m-0">{{ video_material.created_at | date:"d M Y" }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                
