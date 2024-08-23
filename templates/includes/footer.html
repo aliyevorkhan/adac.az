@@ -105,6 +105,11 @@
     e.preventDefault();
     let email = document.querySelector('input[name="subscription-email"]').value;
     let csrftoken = getCookie('csrftoken');
+    // if email is empty, show error message
+    if (email === "") {
+      alert("Email ünvanı boş ola bilməz!");
+      return;
+    }
     fetch('/api/email-subscription/', {
       method: 'POST',
       headers: {
