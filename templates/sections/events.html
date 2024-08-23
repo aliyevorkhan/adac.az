@@ -11,7 +11,7 @@
             <div class="row align-items-center gx-lg-5 gy-4">
               <div class="col-lg-4">
                 <div class="event-image">
-                  <a href="{% url 'event_detail' event.id %}"><img src="/media/events/1723657039778_e2aqlmq.jpeg"
+                  <a href="{% url 'event_detail' event.id %}"><img src="{{ event.image.url }}"
                       alt="event-img" class="w-100 rounded"></a>
                 </div>
               </div>
@@ -19,7 +19,7 @@
                 <div class="event-info">
                   <div class="event-info-top pb-4 mb-4 border-dashed-bottom">
                     <h3 class="mb-2"><a href="{% url 'event_detail' event.id %}" class="darkgreen">{{event.title}}</a></h3>
-                    <p class="mb-0">{{event.description}}</p>
+                    <p class="mb-0">{{event.description|safe|truncatewords:20}}</p>
                   </div>
                   <div class="event-info-bottom">
                     <h6 class="mb-3">Məkan: {{event.location}}</h6>
