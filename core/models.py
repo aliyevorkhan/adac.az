@@ -69,6 +69,7 @@ class VideoMaterial(models.Model):
     title = models.CharField(max_length=255)
     image = models.ImageField(upload_to="video-materials/")
     description = RichTextField()
+    youtube_url = models.CharField(max_length=255, blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     is_active = models.BooleanField(default=True)

@@ -50,6 +50,9 @@
               </div>
               <div class="article-detail-info mb-6 text-center text-md-start">
                 <p>{{ video_material.description|safe }}</p>
+                {% if video_material.youtube_url %}
+                <iframe width="560" height="315" src="{{video_material.youtube_url}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                {% endif %}
               </div>
             </div>
           </div>
