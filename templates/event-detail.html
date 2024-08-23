@@ -38,7 +38,7 @@
                 <img src="{{ event.image.url }}" alt="event-image" class="w-100 rounded-1">
               </div>
               <div class="event-info mb-6">
-                <p>{{event.description}}</p>
+                <p>{{event.description|safe}}</p>
               </div>
             </div>
           </div>
