@@ -85,6 +85,7 @@ def join_form(request):
         university_level=data.get("university-level"),
         profession=data.get("profession"),
         job=data.get("job"),
+        experience_years=data.get("experience-years"),
         position=data.get("position"),
         motivation_letter=data.get("motivation-letter"),
     )

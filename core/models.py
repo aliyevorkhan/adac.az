@@ -89,6 +89,7 @@ class JoinForm(models.Model):
     university_level = models.CharField(max_length=255)
     profession = models.CharField(max_length=255)
     job = models.CharField(max_length=255, blank=True, null=True)
+    experience_years = models.CharField(max_length=255, blank=True, null=True)
     position = models.CharField(max_length=255, blank=True, null=True)
     motivation_letter = models.TextField()
 
