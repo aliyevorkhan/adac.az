@@ -66,16 +66,29 @@
         <div class="container">
           <div class="header-nav-menu-inner py-2">
             <div class="row align-items-center justify-content-between">
-              <div class="col-lg-3 col-md-5 col-5">
+              <!-- Logo Section -->
+              <div class="col-lg-3 col-md-5 col-6">
                 <div class="navbar-logo m-0">
-                  <a href="{% url 'home' %}"><img src="{% static 'images/logo/adac.logo.png' %}" alt="Logo" width="50%"></a>
+                  <a href="{% url 'home' %}">
+                    <img src="{% static 'images/logo/adac.logo.png' %}" alt="Logo" class="img-fluid">
+                  </a>
                 </div>
               </div>
-              <div class="col-lg-7">
-                <div class="navbar-collapse ms-8" id="bs-example-navbar-collapse-1">
+      
+              <!-- Hamburger Menu for Mobile -->
+              <div class="col-6 d-lg-none text-end">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobile-menu"
+                        aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">&#9776;</span> <!-- Hamburger Icon -->
+                </button>
+              </div>
+      
+              <!-- Desktop Navigation Menu -->
+              <div class="col-lg-7 d-none d-lg-block">
+                <div class="navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="navbar-nav align-items-center justify-content-center flex-row" id="responsive-menu">
-                    <li class="nav-item ">
-                      <a class="nav-link px-3 py-0 white text-uppercase" aria-current="page" href="{% url 'home' %}">ANA SƏHİFƏ</a>
+                    <li class="nav-item">
+                      <a class="nav-link px-3 py-0 white text-uppercase" href="{% url 'home' %}">ANA SƏHİFƏ</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link px-3 py-0 white text-uppercase" href="{% url 'about' %}">HAQQIMIZDA</a>
@@ -83,30 +96,58 @@
                     <li class="nav-item">
                       <a class="nav-link px-3 py-0 white text-uppercase" href="{% url 'events' %}">TƏDBİRLƏR</a>
                     </li>
-                    <li class="nav-item dropdown ">
-                      <a class="nav-link dropdown-toggle px-3 py-0 white text-uppercase my-4" href="#" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        TƏLİMLƏR
-                      </a>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle px-3 py-0 white text-uppercase" href="#" role="button"
+                         data-bs-toggle="dropdown" aria-expanded="false">TƏLİMLƏR</a>
                       <ul class="dropdown-menu bg-lightgrey p-0 rounded-1">
                         <li><a class="dropdown-item py-2 px-7 text-capitalize black border-0 rounded-top-1 border-bottom border-1 border-grey grey"
-                          href="{% url 'articles' %}">Məqalələr</a></li>
+                               href="{% url 'articles' %}">Məqalələr</a></li>
                         <li><a class="dropdown-item py-2 px-7 text-capitalize black border-0 rounded-bottom-1 grey"
-                            href="{% url 'video-materials' %}">Video Materiallar</a></li>
+                               href="{% url 'video-materials' %}">Video Materiallar</a></li>
                       </ul>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link px-3 py-0 white text-uppercasen" href="{% url 'vacancies' %}">VAKANSİYALAR</a>
+                      <a class="nav-link px-3 py-0 white text-uppercase" href="{% url 'vacancies' %}">VAKANSİYALAR</a>
                     </li>
                   </ul>
                 </div>
               </div>
-              <div class="col-lg-2">
-                <div class="navbar-button text-end">
-                  <a class="btn" href="{% url 'join_us' %}">İCMAMIZA QOŞUL</a>
-                </div>
+      
+              <!-- Join Button for Desktop -->
+              <div class="col-lg-2 text-end d-none d-lg-block">
+                <a class="btn btn-primary" href="{% url 'join_us' %}">İCMAMIZA QOŞUL</a>
               </div>
-              <div id="slicknav-mobile"></div>
+            </div>
+      
+            <!-- Mobile Menu -->
+            <div class="collapse" id="mobile-menu">
+              <ul class="navbar-nav align-items-center flex-column">
+                <!-- <li class="nav-item">
+                  <a class="nav-link px-3 py-2 white text-uppercase" href="{% url 'home' %}">ANA SƏHİFƏ</a>
+                </li> -->
+                <li class="nav-item">
+                  <a class="nav-link px-3 py-2 white text-uppercase" href="{% url 'about' %}">HAQQIMIZDA</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link px-3 py-2 white text-uppercase" href="{% url 'events' %}">TƏDBİRLƏR</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle px-3 py-2 white text-uppercase" href="#" role="button"
+                     data-bs-toggle="dropdown" aria-expanded="false">TƏLİMLƏR</a>
+                  <ul class="dropdown-menu bg-lightgrey p-0 rounded-1">
+                    <li><a class="dropdown-item py-2 px-7 text-capitalize black border-0 rounded-top-1 border-bottom border-1 border-grey grey"
+                           href="{% url 'articles' %}">Məqalələr</a></li>
+                    <li><a class="dropdown-item py-2 px-7 text-capitalize black border-0 rounded-bottom-1 grey"
+                           href="{% url 'video-materials' %}">Video Materiallar</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link px-3 py-2 white text-uppercase" href="{% url 'vacancies' %}">VAKANSİYALAR</a>
+                </li>
+                <li class="nav-item">
+                  <a class="btn btn-primary px-3 py-2" href="{% url 'join_us' %}">İCMAMIZA QOŞUL</a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>

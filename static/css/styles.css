@@ -30,6 +30,76 @@
   }
 }
 
+/*Header-nav-menu  Section*/
+
+/* Custom CSS for responsive navigation */
+.navbar-toggler {
+  display: block;
+  position: absolute;
+  top: 15px; /* Adjust for top placement */
+  right: 15px; /* Adjust for right placement */
+  border: none;
+  background: none;
+  font-size: 24px;
+  color: #333; /* Adjust color for visibility */
+  cursor: pointer;
+  z-index: 1000; /* Ensure it is on top */
+}
+
+.navbar-toggler:focus {
+  outline: none;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    display: none; /* Hide on mobile */
+  }
+
+  .collapse.show {
+    display: block;
+    background-color: #fff; /* Ensure background color is white */
+    width: 100%;
+  }
+  
+  .navbar-nav {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .navbar-nav .nav-link {
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    color: #333; /* Adjust for better visibility */
+  }
+
+  .navbar-nav .dropdown-menu {
+    width: 100%; /* Ensure dropdown is full-width on mobile */
+  }
+
+  .navbar-button {
+    margin-top: 10px;
+    text-align: center; /* Center join button on mobile */
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-toggler {
+    display: none; /* Hide toggler on desktop */
+  }
+
+  .navbar-button {
+    text-align: right; /* Align button to the right on desktop */
+  }
+
+  .navbar-nav {
+    flex-direction: row; /* Align nav items in a row on desktop */
+  }
+}
+/*Header-nav-menu  Section*/
+
+
 
 
 /*Header-nav-menu  Section*/
