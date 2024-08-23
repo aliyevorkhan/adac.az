@@ -64,6 +64,7 @@ class Vacancy(models.Model):
     def __str__(self):
         return self.title
 
+
 class VideoMaterial(models.Model):
     title = models.CharField(max_length=255)
     image = models.ImageField(upload_to="video-materials/")
@@ -74,3 +75,33 @@ class VideoMaterial(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class JoinForm(models.Model):
+    fullname = models.CharField(max_length=255)
+    email = models.CharField(max_length=255)
+    phone = models.CharField(max_length=255)
+    date_of_birth = models.CharField(max_length=255)
+    gender = models.CharField(max_length=255)
+    university = models.CharField(max_length=255)
+    university_level = models.CharField(max_length=255)
+    profession = models.CharField(max_length=255)
+    job = models.CharField(max_length=255, blank=True, null=True)
+    position = models.CharField(max_length=255, blank=True, null=True)
+    motivation_letter = models.TextField()
+
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    is_active = models.BooleanField(default=True)
+
+    def __str__(self):
+        return self.fullname
+
+class EmailSubscription(models.Model):
+    email = models.EmailField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    is_active = models.BooleanField(default=True)
+
+    def __str__(self):
+        return self.email

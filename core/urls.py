@@ -8,6 +8,11 @@ from core.views import (
     about,
     video_materials,
     video_material_detail,
+    vacancies,
+    vacancy_detail,
+    join_us,
+    join_form,
+    email_subscription,
 )
 
 urlpatterns = [
@@ -23,4 +28,9 @@ urlpatterns = [
         name="video_material_detail",
     ),
     path("event/<int:event_id>/", event_detail, name="event_detail"),
+    path("vacancies/", vacancies, name="vacancies"),
+    path("vacancy/<int:vacancy_id>/", vacancy_detail, name="vacancy_detail"),
+    path("join-us/", join_us, name="join_us"),
+    path("api/join-form/", join_form, name="join_form"),
+    path("api/email-subscription/", email_subscription, name="email_subscription"),
 ]

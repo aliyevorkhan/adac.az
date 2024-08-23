@@ -67,10 +67,10 @@
                 <form>
                   <div class="row">
                     <div class="col-lg-12 col-md-8">
-                      <input type="email" placeholder="Elektron poçt ünvanı" class="mb-2" required>
+                      <input type="email" placeholder="Elektron poçt ünvanı" name="subscription-email" class="mb-2" required>
                     </div>
                     <div class="col-lg-12 col-md-4">
-                      <button class="btn w-100 w-lg-40">Abunə ol</button>
+                      <button class="btn w-100 w-lg-40" name="subscribe-btn">Abunə ol</button>
                     </div>
                   </div>
                 </form>
@@ -83,4 +83,45 @@
     <div class="copyright py-6 bg-darker position-relative text-center white">
       <p class="mb-0">Powered by <a href="https://www.simic.app">Simic.App</a> | 2024</p>
     </div>
-  </footer>
+</footer>
+<script>
+  function getCookie(name) {
+    let cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+      const cookies = document.cookie.split(';');
+      for (let i = 0; i < cookies.length; i++) {
+        const cookie = cookies[i].trim();
+        // Does this cookie string begin with the name we want?
+        if (cookie.substring(0, name.length + 1) === (name + '=')) {
+          cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+          break;
+        }
+      }
+    }
+    return cookieValue;
+  }
+
+  //if subscribe button is clicked
+  document.querySelector('button[name="subscribe-btn"]').addEventListener('click', function(e) {
+    e.preventDefault();
+    let email = document.querySelector('input[name="subscription-email"]').value;
+    let csrftoken = getCookie('csrftoken');
+    fetch('/api/email-subscription/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRFToken': csrftoken,
+      },
+      body: JSON.stringify({
+        email: email
+      })
+    }).then(response => response.json())
+      .then(data => {
+        if (data.status === "success") {
+          alert('Siz uğurla abunə oldunuz');
+        } else {
+          alert('Təəssüf ki, abunə olmaq mümkün olmadı, xahiş edirik bizimlə əlaqə saxlayın');
+        }
+      });
+  });
+</script>

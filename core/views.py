@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from core.models import Event, Article, Team, VideoMaterial
+from core.models import Event, Article, Team, VideoMaterial, Vacancy, JoinForm, EmailSubscription
 
 
 def home(request):
@@ -48,3 +48,56 @@ def video_material_detail(request, video_material_id):
 def about(request):
     team = Team.objects.filter(is_active=True)
     return render(request, "about.html", {"team": team})
+
+
+def vacancies(request):
+    vacancies = Vacancy.objects.filter(is_active=True)
+    return render(request, "career-list.html", {"vacancies": vacancies})
+
+
+def vacancy_detail(request, vacancy_id):
+    vacancy = Vacancy.objects.get(id=vacancy_id)
+    vacancies = Vacancy.objects.filter(is_active=True)
+    return render(
+        request, "career-detail.html", {"vacancy": vacancy, "vacancies": vacancies}
+    )
+
+
+def join_us(request):
+    return render(request, "join-us.html")
+
+
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from rest_framework import status
+
+
+@api_view(["POST"])
+def join_form(request):
+    data = request.data
+    JoinForm.objects.create(
+        fullname=data.get("fullname"),
+        email=data.get("email"),
+        phone=data.get("phone"),
+        date_of_birth=data.get("date-of-birth"),
+        gender=data.get("gender"),
+        university=data.get("university"),
+        university_level=data.get("university-level"),
+        profession=data.get("profession"),
+        job=data.get("job"),
+        position=data.get("position"),
+        motivation_letter=data.get("motivation-letter"),
+    )
+    return Response(
+        {"message": "Form submitted successfully!"}, status=status.HTTP_201_CREATED
+    )
+
+@api_view(["POST"])
+def email_subscription(request):
+    data = request.data
+    EmailSubscription.objects.create(
+        email=data.get("email")
+    )
+    return Response(
+        {"message": "Email subscribed successfully!", "status": "success"}, status=status.HTTP_201_CREATED
+    )
