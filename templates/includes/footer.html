@@ -101,7 +101,6 @@
     return cookieValue;
   }
 
-  //if subscribe button is clicked
   document.querySelector('button[name="subscribe-btn"]').addEventListener('click', function(e) {
     e.preventDefault();
     let email = document.querySelector('input[name="subscription-email"]').value;
@@ -118,9 +117,9 @@
     }).then(response => response.json())
       .then(data => {
         if (data.status === "success") {
-          alert('Siz uğurla abunə oldunuz');
+          alert(data.message);
         } else {
-          alert('Təəssüf ki, abunə olmaq mümkün olmadı, xahiş edirik bizimlə əlaqə saxlayın');
+          alert(data.message);
         }
       });
   });

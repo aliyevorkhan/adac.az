@@ -95,9 +95,13 @@ def join_form(request):
 @api_view(["POST"])
 def email_subscription(request):
     data = request.data
+    if EmailSubscription.objects.filter(email=data.get("email")).exists():
+        return Response(
+            {"message": "Siz artıq abunəsiniz!", "status": "error"}, status=status.HTTP_400_BAD_REQUEST
+        )
     EmailSubscription.objects.create(
         email=data.get("email")
     )
     return Response(
-        {"message": "Email subscribed successfully!", "status": "success"}, status=status.HTTP_201_CREATED
+        {"message": "Siz uğurla abunə oldunuz!", "status": "success"}, status=status.HTTP_201_CREATED
     )
