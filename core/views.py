@@ -75,6 +75,9 @@ from rest_framework import status
 @api_view(["POST"])
 def join_form(request):
     data = request.data
+    if data.get("other-university"):
+        data["university"] = data.get("other-university")
+
     JoinForm.objects.create(
         fullname=data.get("fullname"),
         email=data.get("email"),

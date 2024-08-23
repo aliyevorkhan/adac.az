@@ -7,184 +7,252 @@
 {% include 'includes/header.html' %}
 
 <body>
-<!-- Header Section Start -->
-{% include 'includes/navbar.html' %}
-<!-- Header Section End -->
+  <!-- Header Section Start -->
+  {% include 'includes/navbar.html' %}
+  <!-- Header Section End -->
 
-<!-- Banner Section Start -->
-<section class="banner page-breadcrumb position-relative py-11">
-  <div class="overlay opacity-75"></div>
-  <div class="container position-relative">
-    <div class="page-title white text-center mt-7">
-      <h2 class="white mb-2">İcmamıza Qoşul</h2>
-    </div>
-  </div>
-</section>
-<!-- Banner Section End -->
-
-<!-- Donate Now Section Start -->
-<section class="donate-now py-10">
-  <div class="container">
-    <div class="donate-now-inner w-lg-75 m-auto text-center text-md-start">
-      <h2 class="mb-2"><span class="green">İcmaya Qoşulma</span> Forması</h2>
-      <!-- <p class="mb-4">Help us reach our Goal.</p> -->
-      <div class="donation-form text-start">
-        <form>
-          <div class="row gy-4">
-            <div class="col-lg-6 col-md-6">
-              <label for="fullname" class="mb-2">Ad Soyad <small style="color: red;">*</small></label>
-              <input type="text" id="fullname" name="fullname" placeholder="Ad Soyad" class=" border border-2 border-grey">
-            </div>
-            <div class="col-lg-6 col-md-6">
-              <label for="email" class="mb-2">E-poçt ünvanı <small style="color: red;">*</small></label>
-              <input type="email" id="email" name="email" placeholder="E-poçt ünvanı" class=" border border-2 border-grey">
-            </div>
-            <div class="col-lg-6 col-md-6">
-              <label for="phone" class="mb-2">Tel. <small style="color: red;">*</small></label>
-              <input type="tel" id="phone" name="phone" placeholder="Tel." class=" border border-2 border-grey">
-            </div>
-            <div class="col-lg-6 col-md-6">
-              <label for="date-of-birth" class="mb-2">Təvəllüd <small style="color: red;">*</small></label>
-              <input type="number" name="date-of-birth" id="date-of-birth" placeholder="Təvəllüd" class=" border border-2 border-grey">
-            </div>
-            <div class="col-lg-6 col-md-6">
-              <label for="gender" class="mb-2">Cins <small style="color: red;">*</small></label>
-              <select id="gender" name="gender" class=" border border-2 border-grey text mb-4">
-                <option value>--Seçim edin--</option>
-                <option value="1">Qadın</option>
-                <option value="2">Kişi</option>
-              </select>
-            </div>
-            <div class="col-lg-6 col-md-6">
-              <label for="university-level" class="mb-2">Universitet dərəcəsi (Sonuncusunu) <small style="color: red;">*</small></label>
-              <input type="text" id="university-level" name="university-level" placeholder="Universitet dərəcəsi" class=" border border-2 border-grey" required>
-            </div>
-            <div class="col-lg-6 col-md-6">
-              <label for="university" class="mb-2">Universitet <small style="color: red;">*</small></label>
-              <input type="text" id="university" name="university" placeholder="Universitet" class=" border border-2 border-grey">
-            </div>
-            <div class="col-lg-6 col-md-6">
-              <label for="profession" class="mb-2">İxtisas <small style="color: red;">*</small></label>
-              <input type="text" id="profession" name="profession" placeholder="İxtisas" class=" border border-2 border-grey">
-            </div>
-            <div class="col-lg-6 col-md-6">
-              <label for="job" class="mb-2">İş yeri</label>
-              <input type="text" id="job" name="job" placeholder="İş yeri" class=" border border-2 border-grey">
-            </div>
-            <div class="col-lg-6 col-md-6">
-              <label for="experience-years" class="mb-2">İş stajı (il)</label>
-              <input type="number" name="experience-years" id="experience-years" placeholder="İş stajı (il)" class=" border border-2 border-grey">
-            </div>
-            <div class="col-lg-6 col-md-6">
-              <label for="job-position" class="mb-2">Vəzifə</label>
-              <input type="text" name="position" id="job-position" placeholder="Vəzifə" class=" border border-2 border-grey">
-            </div>
-            <div class="col-lg-12 col-md-12">
-              <label for="motivation-letter" class="mb-2">Motivasiya Məktubu <small style="color: red;">*</small></label>
-              <textarea name="motivation-letter" id="motivation-letter" placeholder="İcmamıza niyə qoşulmaq istəyirsiniz?" rows="7" class="border border-2 border-grey"></textarea>
-            </div>
-          </div>
-          <button class="btn btn1 mt-3">Göndər</button>
-        </form>
+  <!-- Banner Section Start -->
+  <section class="banner page-breadcrumb position-relative py-11">
+    <div class="overlay opacity-75"></div>
+    <div class="container position-relative">
+      <div class="page-title white text-center mt-7">
+        <h2 class="white mb-2">İcmamıza Qoşul</h2>
       </div>
     </div>
-  </div>
-</section>
-<!-- Donate Now Section End -->
-<!-- Campaign Section End -->
-{% include 'includes/footer.html' %}
-<!--Bacl-to-top Button start-->
-{% include 'includes/back_to_top.html' %}
-<!--Bacl-to-top Button end-->
+  </section>
+  <!-- Banner Section End -->
 
-{% include 'includes/scripts.html' %}
+  <!-- Donate Now Section Start -->
+  <section class="donate-now py-10">
+    <div class="container">
+      <div class="donate-now-inner w-lg-75 m-auto text-center text-md-start">
+        <h2 class="mb-2"><span class="green">İcmaya Qoşulma</span> Forması</h2>
+        <!-- <p class="mb-4">Help us reach our Goal.</p> -->
+        <div class="donation-form text-start">
+          <form>
+            <div class="row gy-4">
+              <div class="col-lg-6 col-md-6">
+                <label for="fullname" class="mb-2">Ad Soyad <small style="color: red;">*</small></label>
+                <input type="text" id="fullname" name="fullname" placeholder="Ad Soyad"
+                  class=" border border-2 border-grey">
+              </div>
+              <div class="col-lg-6 col-md-6">
+                <label for="email" class="mb-2">E-poçt ünvanı <small style="color: red;">*</small></label>
+                <input type="email" id="email" name="email" placeholder="E-poçt ünvanı"
+                  class=" border border-2 border-grey">
+              </div>
+              <div class="col-lg-6 col-md-6">
+                <label for="phone" class="mb-2">Tel. <small style="color: red;">*</small></label>
+                <input type="tel" id="phone" name="phone" placeholder="Tel." class=" border border-2 border-grey">
+              </div>
+              <div class="col-lg-6 col-md-6">
+                <label for="date-of-birth" class="mb-2">Təvəllüd <small style="color: red;">*</small></label>
+                <input type="number" name="date-of-birth" id="date-of-birth" placeholder="Təvəllüd"
+                  class=" border border-2 border-grey">
+              </div>
+              <div class="col-lg-6 col-md-6">
+                <label for="gender" class="mb-2">Cins <small style="color: red;">*</small></label>
+                <select id="gender" name="gender" class=" border border-2 border-grey text mb-4">
+                  <option value>--Seçim edin--</option>
+                  <option value="female">Qadın</option>
+                  <option value="male">Kişi</option>
+                </select>
+              </div>
+              <div class="col-lg-6 col-md-6">
+                <label for="university-level" class="mb-2">Universitet dərəcəsi (Sonuncusunu) <small
+                    style="color: red;">*</small></label>
+                <select id="university-level" name="university-level" class=" border border-2 border-grey text mb-4">
+                  <option value>--Seçim edin--</option>
+                  <option value="bachelor">Bakalavr</option>
+                  <option value="master">Magistr</option>
+                  <option value="phd">Doktorantura</option>
+                </select>
+              </div>
+              <!-- <div class="col-lg-6 col-md-6">
+              <label for="university-level" class="mb-2">Universitet dərəcəsi (Sonuncusunu) <small style="color: red;">*</small></label>
+              <input type="text" id="university-level" name="university-level" placeholder="Universitet dərəcəsi" class=" border border-2 border-grey" required>
+            </div> -->
+              <!-- <div class="col-lg-6 col-md-6">
+              <label for="university" class="mb-2">Universitet <small style="color: red;">*</small></label>
+              <input type="text" id="university" name="university" placeholder="Universitet" class=" border border-2 border-grey">
+            </div> -->
+              <div class="col-lg-6 col-md-6">
+                <label for="university" class="mb-2">Universitet <small style="color: red;">*</small></label>
+                <select id="university" name="university" class=" border border-2 border-grey text mb-4">
+                  <option value>--Seçim edin--</option>
+                  <option value="Azərbaycan Dillər Universiteti">Azərbaycan Dillər Universiteti</option>
+                  <option value="Azərbaycan Dövlət Aqrar Universiteti">Azərbaycan Dövlət Aqrar Universiteti</option>
+                  <option value="Azərbaycan Dövlət Bədən Tərbiyəsi və İdman Akademiyası">Azərbaycan Dövlət Bədən Tərbiyəsi və İdman Akademiyası</option>
+                  <option value="Azərbaycan Dövlət Dəniz Akademiyası">Azərbaycan Dövlət Dəniz Akademiyası</option>
+                  <option value="Azərbaycan Dövlət İqtisad Universiteti">Azərbaycan Dövlət İqtisad Universiteti</option>
+                  <option value="Azərbaycan Dövlət Mədəniyyət və İncəsənət Universiteti">Azərbaycan Dövlət Mədəniyyət və İncəsənət Universiteti</option>
+                  <option value="Azərbaycan Dövlət Neft və Sənaye Universiteti">Azərbaycan Dövlət Neft və Sənaye Universiteti</option>
+                  <option value="Azərbaycan Dövlət Pedaqoji Universiteti">Azərbaycan Dövlət Pedaqoji Universiteti</option>
+                  <option value="Azərbaycan Dövlət Rəssamlıq Akademiyası">Azərbaycan Dövlət Rəssamlıq Akademiyası</option>
+                  <option value="Azərbaycan Memarlıq və İnşaat Universiteti">Azərbaycan Memarlıq və İnşaat Universiteti</option>
+                  <option value="Azərbaycan Milli Konservatoriyası">Azərbaycan Milli Konservatoriyası</option>
+                  <option value="Azərbaycan Texniki Universiteti">Azərbaycan Texniki Universiteti</option>
+                  <option value="Azərbaycan Tibb Universiteti">Azərbaycan Tibb Universiteti</option>
+                  <option value="Azərbaycan Turizm və Menecment Universiteti">Azərbaycan Turizm və Menecment Universiteti</option>
+                  <option value="Azərbaycan-Fransız Universiteti">Azərbaycan-Fransız Universiteti</option>
+                  <option value="Bakı Ali Neft Məktəbi">Bakı Ali Neft Məktəbi</option>
+                  <option value="Bakı Biznes Universiteti">Bakı Biznes Universiteti</option>
+                  <option value="Bakı Dövlət Universiteti">Bakı Dövlət Universiteti</option>
+                  <option value="Bakı Mühəndislik Universiteti">Bakı Mühəndislik Universiteti</option>
+                  <option value="Bakı Musiqi Akademiyası">Bakı Musiqi Akademiyası</option>
+                  <option value="Gəncə Dövlət Universiteti">Gəncə Dövlət Universiteti</option>
+                  <option value="Lənkəran Dövlət Universiteti">Lənkəran Dövlət Universiteti</option>
+                  <option value="Milli Aviasiya Akademiyası">Milli Aviasiya Akademiyası</option>
+                  <option value="Naxçıvan Dövlət Universiteti">Naxçıvan Dövlət Universiteti</option>
+                  <option value="Sumqayıt Dövlət Universiteti">Sumqayıt Dövlət Universiteti</option>
+                  <option value="Xəzər Universiteti">Xəzər Universiteti</option>
+                  <option value="Naxçıvan Müəllimlər İnstitutu">Naxçıvan Müəllimlər İnstitutu</option>
+                  <option value="Qafqaz Universiteti">Qafqaz Universiteti</option>
+                  <option value="ADA Universiteti">ADA Universiteti</option>
+                  <option value="other">Digər</option>
+                </select>
+              </div>
+              <div class="col-lg-6 col-md-6">
+                <label for="profession" class="mb-2">İxtisas <small style="color: red;">*</small></label>
+                <input type="text" id="profession" name="profession" placeholder="İxtisas"
+                  class=" border border-2 border-grey">
+              </div>
+              <div class="col-lg-6 col-md-6">
+                <label for="job" class="mb-2">İş yeri</label>
+                <input type="text" id="job" name="job" placeholder="İş yeri" class=" border border-2 border-grey">
+              </div>
+              <div class="col-lg-6 col-md-6">
+                <label for="experience-years" class="mb-2">İş stajı (il)</label>
+                <input type="number" name="experience-years" id="experience-years" placeholder="İş stajı (il)"
+                  class=" border border-2 border-grey">
+              </div>
+              <div class="col-lg-6 col-md-6">
+                <label for="job-position" class="mb-2">Vəzifə</label>
+                <input type="text" name="position" id="job-position" placeholder="Vəzifə"
+                  class=" border border-2 border-grey">
+              </div>
+              <div class="col-lg-12 col-md-12">
+                <label for="motivation-letter" class="mb-2">Motivasiya Məktubu <small
+                    style="color: red;">*</small></label>
+                <textarea name="motivation-letter" id="motivation-letter"
+                  placeholder="İcmamıza niyə qoşulmaq istəyirsiniz?" rows="7"
+                  class="border border-2 border-grey"></textarea>
+              </div>
+            </div>
+            <button class="btn btn1 mt-3">Göndər</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Donate Now Section End -->
+  <!-- Campaign Section End -->
+  {% include 'includes/footer.html' %}
+  <!--Bacl-to-top Button start-->
+  {% include 'includes/back_to_top.html' %}
+  <!--Bacl-to-top Button end-->
+
+  {% include 'includes/scripts.html' %}
 
 
-<script>
-  // csrf token generation
-  function getCookie(name) {
-    let cookieValue = null;
-    if (document.cookie && document.cookie !== '') {
-      const cookies = document.cookie.split(';');
-      for (let i = 0; i < cookies.length; i++) {
-        const cookie = cookies[i].trim();
-        // Does this cookie string begin with the name we want?
-        if (cookie.substring(0, name.length + 1) === (name + '=')) {
-          cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-          break;
+  <script>
+    document.querySelector('#university').addEventListener('change', function (e) {
+      if (e.target.value === 'other') {
+        document.querySelector('#university').insertAdjacentHTML('afterend', '<input type="text" id="other-university" name="other-university" placeholder="Universitet" class=" border border-2 border-grey">');
+      } else {
+        document.querySelector('#other-university')?.remove();
+      }
+    });
+
+    function getCookie(name) {
+      let cookieValue = null;
+      if (document.cookie && document.cookie !== '') {
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+          const cookie = cookies[i].trim();
+          // Does this cookie string begin with the name we want?
+          if (cookie.substring(0, name.length + 1) === (name + '=')) {
+            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+            break;
+          }
         }
       }
-    }
-    return cookieValue;
-  }
-
-  //if form filled then send to join/ endpoint with POST method
-  //else show error message
-  document.querySelector('.btn1').addEventListener('click', function(e) {
-    e.preventDefault();
-    let form = document.querySelector('.donation-form form');
-    let formData = new FormData(form);
-    let data = {};
-    formData.forEach((value, key) => {
-      data[key] = value;
-    });
-    // required fields: fullname, email, phone, date-of-birth, gender, university, university-level, profession, job, job-position, motivation-letter
-    if (!data['fullname']) {
-      alert('Ad Soyad daxil edin');
-      return;
-    }
-    if (!data['email']) {
-      alert('E-poçt ünvanı daxil edin');
-      return;
-    }
-    if (!data['phone']) {
-      alert('Telefon nömrəsi daxil edin');
-      return;
-    }
-    if (!data['date-of-birth']) {
-      alert('Təvəllüd daxil edin');
-      return;
-    }
-    if (!data['gender']) {
-      alert('Cins daxil edin');
-      return;
-    }
-    if (!data['university']) {
-      alert('Universitet daxil edin');
-      return;
-    }
-    if (!data['university-level']) {
-      alert('Universitet dərəcəsi daxil edin');
-      return;
-    }
-    if (!data['profession']) {
-      alert('İxtisas daxil edin');
-      return;
-    }
-    if (!data['motivation-letter']) {
-      alert('İcmamıza niyə qoşulmaq istədiyinizi daxil edin');
-      return;
+      return cookieValue;
     }
 
-    fetch('http://127.0.0.1:8000/api/join-form/', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'X-CSRFToken': getCookie('csrftoken')
-      },
-      body: JSON.stringify(data),
-    })
-    // after successful submission, show success message
-    .then(response => {
-      if (response.ok) {
-        alert('Müraciətiniz uğurla göndərildi');
-        form.reset();
-      } else {
-        alert('Müraciətiniz göndərilmədi');
+    document.querySelector('.btn1').addEventListener('click', function (e) {
+      e.preventDefault();
+      let form = document.querySelector('.donation-form form');
+      let formData = new FormData(form);
+      let data = {};
+      formData.forEach((value, key) => {
+        data[key] = value;
+      });
+      if (!data['fullname']) {
+        alert('Ad Soyad daxil edin');
+        return;
       }
-    })
-    .catch(error => console.error(error));
-  });
-</script>
+      if (!data['email']) {
+        alert('E-poçt ünvanı daxil edin');
+        return;
+      }
+      if (!data['phone']) {
+        alert('Telefon nömrəsi daxil edin');
+        return;
+      }
+      if (!data['date-of-birth']) {
+        alert('Təvəllüd daxil edin');
+        return;
+      }
+      if (!data['gender']) {
+        alert('Cins daxil edin');
+        return;
+      }
+      if (!data['university']) {
+        alert('Universitet daxil edin');
+        return;
+      }
+      if (data['university'] === 'other' && !data['other-university']) {
+        alert('Universitet daxil edin');
+        return;
+      }
+      if (!data['university-level']) {
+        alert('Universitet dərəcəsi daxil edin');
+        return;
+      }
+      if (!data['profession']) {
+        alert('İxtisas daxil edin');
+        return;
+      }
+      if (!data['motivation-letter']) {
+        alert('İcmamıza niyə qoşulmaq istədiyinizi daxil edin');
+        return;
+      }
+
+      document.querySelectorAll('.donation-form input, .donation-form select, .donation-form textarea').forEach(input => {
+        input.disabled = true;
+      });
+
+      fetch('http://127.0.0.1:8000/api/join-form/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRFToken': getCookie('csrftoken')
+        },
+        body: JSON.stringify(data),
+      })
+        // after successful submission, show success message
+        .then(response => {
+          if (response.ok) {
+            alert('Müraciətiniz uğurla göndərildi');
+            window.location.href = '/';
+          } else {
+            alert('Müraciətiniz göndərilmədi');
+          }
+        })
+        .catch(error => console.error(error));
+    });
+  </script>
 </body>
+
 </html>
