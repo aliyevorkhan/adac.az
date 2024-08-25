@@ -228,6 +228,10 @@
         alert('İcmamıza niyə qoşulmaq istədiyinizi daxil edin');
         return;
       }
+      if (data['motivation-letter'].length < 100) {
+        alert('Motivasiya məktubu ən az 100 simvoldan ibarət olmalıdır');
+        return;
+      }
 
       document.querySelectorAll('.donation-form input, .donation-form select, .donation-form textarea').forEach(input => {
         input.disabled = true;
