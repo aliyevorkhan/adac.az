@@ -47,7 +47,7 @@
               </div>
               <div class="col-lg-6 col-md-6">
                 <label for="date-of-birth" class="mb-2">Təvəllüd <small style="color: red;">*</small></label>
-                <input type="number" name="date-of-birth" id="date-of-birth" placeholder="Təvəllüd"
+                <input type="number" name="date-of-birth" id="date-of-birth" placeholder="Sadəcə doğum ilinizi daxil edin"
                   class=" border border-2 border-grey">
               </div>
               <div class="col-lg-6 col-md-6">
@@ -230,6 +230,10 @@
       }
       if (data['motivation-letter'].length < 100) {
         alert('Motivasiya məktubu ən az 100 simvoldan ibarət olmalıdır');
+        return;
+      }
+      if (isNaN(data['date-of-birth'])) {
+        alert('Təvəllüd ilini düzgün daxil edin! Məsələn: 1990');
         return;
       }
 
